@@ -15,7 +15,7 @@ function fetchCocktailList(){
     )
     .then(
        (data)=>{
-        const drinksArray = data
+        const drinksArray = data.drinks
        } 
     )
 }
