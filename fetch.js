@@ -3,7 +3,7 @@ const container = document.querySelector('.cocktail-list')
 const input = document.getElementById('input')
 
 const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
-const searchParams = ''
+const searchParams = 'apple'
 
 function fetchCocktailList(){
     fetch(`${url}${searchParams}`)
@@ -25,4 +25,4 @@ function fetchCocktailList(){
     )
 }
 
-fetchCocktailList()
+input.addEventListener('keyup', fetchCocktailList)
