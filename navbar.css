@@ -1,0 +1,41 @@
+/* *{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+} */
+.header{
+    width: 100%;
+    background: beige;
+    padding: 25px 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgb(61, 61, 61);
+}
+.logo{
+    text-decoration: none;
+    font-size: 22px;
+    color: green;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.logo span{
+    color: orange;
+}
+.navbar{
+    margin: auto;
+}
+.navbar a{
+    text-decoration: none;
+    font-size: 17px;
+    color: green;
+    margin-left: 25px;
+}
+.navbar a:hover,
+.navbar a.active{
+    border-bottom: 2px solid orange;
+}

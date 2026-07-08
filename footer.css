@@ -1,0 +1,55 @@
+.footer{
+  width: 100%;
+  padding: 2% 7%;
+  position: relative;
+  background-color: #476a2e;
+  color: white;    
+}
+.footer>div{
+  display: flex;
+  justify-content: space-between;
+}
+.footer>div>div{
+  width: 23%; 
+}
+.footer h3{
+  margin-bottom: 5px;
+}
+.footer ul li Navlink{
+  cursor: pointer;
+  font-size: large;
+}
+.footer ul li .a{
+  color: white;
+  text-decoration: none;   
+}
+.footer ul li .a:hover{
+  border-left: 3px solid darkorange;
+  border-radius: none;
+  padding-left: 3px;
+}
+.footer ul li .active{
+  border: none;
+  text-decoration: none;
+  border-left: 3px solid darkorange;
+  border-radius: none;
+  padding-left: 3px;
+}
+.footer ul li .top-courses{
+  text-decoration: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.footer ul li .top-courses:hover{
+  text-decoration: underline;
+}
+.footer ul li span :first-child{
+  color: darkorange;
+  margin-right: 5px;
+}
+.footer>p{
+  text-align: center;
+  margin-top: 2%;
+  font-size: medium;
+}
