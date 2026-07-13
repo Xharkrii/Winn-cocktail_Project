@@ -8,7 +8,7 @@ let searchParams = ''
 function fetchCocktailList(){
     const inputValue = input.value
     if (inputValue === '') {
-        input = 'a'
+        searchParams = 'a'
     }
     else{
         searchParams = inputValue
@@ -58,3 +58,4 @@ function fetchCocktailList(){
 }
 
 input.addEventListener('keyup', fetchCocktailList)
+document.addEventListener('DOMContentLoaded', fetchCocktailList)
