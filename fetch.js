@@ -2,7 +2,7 @@
 const container = document.querySelector('.cocktail-list')
 const input = document.getElementById('input')
 
-const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
+const searchUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 let searchParams = ''
 
 function fetchCocktailList(){
@@ -13,7 +13,7 @@ function fetchCocktailList(){
     else{
         searchParams = inputValue
     }
-    fetch(`${url}${searchParams}`)
+    fetch(`${searchUrl}${searchParams}`)
     .then(
         (resp)=>{
             if (resp.status === 200) {
@@ -32,7 +32,7 @@ function fetchCocktailList(){
         container.innerHTML = ''
         drinksArray.forEach(singleDrink => {
             container.innerHTML += `
-                <article>
+                <article class="card">
                     <div class="image">
                         <img src=${singleDrink.strDrinkThumb} alt="">
                     </div>
@@ -45,8 +45,8 @@ function fetchCocktailList(){
                         <div class="sub">
                             <p>Serving Glass:</p>
                             <p>${singleDrink.strGlass}</p>
-                        </div>
-                        <a href="">
+                        </div class="detail-btn" data-id="${singleDrink.idDrink}">
+                        <a href="details.html?id=${singleDrink.idDrink}">
                             <button>More Details</button>
                         </a>
                     </div>  
@@ -56,6 +56,7 @@ function fetchCocktailList(){
        } 
     )
 }
+
 
 input.addEventListener('keyup', fetchCocktailList)
 document.addEventListener('DOMContentLoaded', fetchCocktailList)

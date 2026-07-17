@@ -302,3 +302,71 @@ article .description .sub p:first-child {
         width: 100%
     }
 }
+.single{
+  display: block;
+  box-shadow:2px 5px 3px 0px rgba(0, 0, 0, 0.5) ;
+  width: 80vw;
+  margin: auto; 
+  background-color: whitesmoke;
+  padding: 1rem 3rem;
+  margin-top: 5%;
+}
+.single h3{
+  text-align: center;
+  margin-bottom: 0.5rem;
+ }
+ 
+ .single .home-btn{
+   display: flex;
+   justify-content: center;
+ }
+ 
+ .single .home-btn button{
+   padding: 5px 10px;
+   border-radius: 4px;
+   color: white;
+   background-color: #476a2e;
+   cursor: pointer;
+ }
+ 
+  .single-center .image img{
+    height: 20rem;
+    border-radius: 10px;
+ }
+ 
+ .single-center .sub span:first-child{
+   background-color: darkorange;
+   margin-right: 10px;
+   border-radius: 4px;
+   text-transform: capitalize;
+   font-weight: 600;
+   padding: 4px;
+   color: white;
+ }
+ .single-center .sub{
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 900px) {
+  .cocktail-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
+    display: grid;
+    row-gap: 2rem;
+    column-gap: 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .single-center {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 3rem;
+    grid-template-rows: 1fr ;
+    align-items: center;
+  }
+  .drink-info {
+    padding-top: 0;
+  }
+}
+.cancel{
+  color: red;
+}
